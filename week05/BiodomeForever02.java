@@ -68,9 +68,6 @@ public class BiodomeForever02 {
     }
 
     public static void print(BufferedReader reader) throws IOException {
-        int ch;
-        while ((ch = reader.read()) != -1) {
-            System.out.print((char) ch);
-        }
+        BiodomeForever01.print(reader);
     }
 }
