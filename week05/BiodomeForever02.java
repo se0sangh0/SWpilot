@@ -49,13 +49,7 @@ public class BiodomeForever02 {
             String absoluteFilePath = baseDirectory + fullFileName;
             setting(absoluteFilePath);
 
-        } catch (ArrayIndexOutOfBoundsException e) {
-            e.printStackTrace();
-        } catch (DateTimeParseException e) {
-            e.printStackTrace();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
+        } catch (ArrayIndexOutOfBoundsException | DateTimeParseException | IOException e) {
             e.printStackTrace();
         } catch (Exception e) { // 그 외 예상치 못한 모든 예외
             e.printStackTrace();
