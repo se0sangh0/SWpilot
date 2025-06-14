@@ -57,19 +57,13 @@ public class BiodomeForever02 {
     }
 
     public static void setting(String directory) throws IOException {
-        BufferedReader reader = null;
-        try {
-            reader = new BufferedReader(
-                    new InputStreamReader(
-                            new FileInputStream(directory),
-                            StandardCharsets.UTF_8
-                    )
-            );
+        try (BufferedReader reader = new BufferedReader(
+                new InputStreamReader(
+                        new FileInputStream(directory),
+                        StandardCharsets.UTF_8
+                )
+        )) {
             print(reader);
-        } finally {
-            if (reader != null) {
-                reader.close();
-            }
         }
     }
 
